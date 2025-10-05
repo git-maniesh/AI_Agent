@@ -2,7 +2,7 @@
 
 const API_KEY = "AIzaSyDUSeK0ojUgFBuV98ddwRXwaKzNWJpv6Og"
 // const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
-const API_URL = `"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`
 
 const container = document.querySelector(".container")
 const chatsContainer = document.querySelector(".chats-container")
@@ -243,6 +243,7 @@ document.querySelectorAll(".suggestions-item").forEach(item =>{
 promptForm.addEventListener("submit", handleFormSubmit)
 
 promptForm.querySelector("#add-file-btn").addEventListener("click", () => fileInput.click())
+
 
 
 
