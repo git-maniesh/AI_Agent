@@ -1,6 +1,6 @@
+ 
 
-
-const API_KEY = "AIzaSyDYg2l1LGTwVW-HQKEQJFWcsOvzLfaBd2c"
+const API_KEY = "AIzaSyDUSeK0ojUgFBuV98ddwRXwaKzNWJpv6Og"
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
 
 const container = document.querySelector(".container")
@@ -242,6 +242,7 @@ document.querySelectorAll(".suggestions-item").forEach(item =>{
 promptForm.addEventListener("submit", handleFormSubmit)
 
 promptForm.querySelector("#add-file-btn").addEventListener("click", () => fileInput.click())
+
 
 
 
