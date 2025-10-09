@@ -228,9 +228,14 @@ background: var(--primary-color);
 .prompt-container :where(.prompt-wrapper, .prompt-form,.prompt-actions){
     display: flex;
     gap: 12px;
-    height: 56px;
+   /* height: 56px;*/
     align-items: center;
 }
+.prompt-container {
+    padding-bottom: 24px;
+    transition: height 0.2s ease;
+}
+
 
 .prompt-wrapper .prompt-form{
     width: 100%;
@@ -239,7 +244,7 @@ background: var(--primary-color);
     
     background: var(--secondary-color);
 }
-
+/*
 .prompt-form .prompt-input{
     height: 100%;
     width: 100%;
@@ -249,6 +254,26 @@ background: var(--primary-color);
     font-size: 1rem;
     padding-left: 24px;
     color: var(--text-color);
+}
+*/
+.prompt-form .prompt-input {
+    width: 100%;
+    min-height: 48px;
+    max-height: 150px; /* prevents box from expanding too much */
+    resize: none; /* disable manual resize handle */
+    overflow-y: auto;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 14px 24px;
+    color: var(--text-color);
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: middle;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 .prompt-form .prompt-input::placeholder{
@@ -279,6 +304,10 @@ background: var(--primary-color);
     gap: 5px;
     margin-right: 5px;
 }
+.prompt-actions {
+    align-items: flex-end;
+}
+
 .prompt-wrapper  .prompt-form :where(.file-upload-wrapper, button, img) {
     position: relative;
     height: 45px;
@@ -359,4 +388,5 @@ body.bot-responding .prompt-form #stop-response-btn {
     .prompt-wrapper.hide-controls :where(#theme-toggle-btn, #delete-chats-btn)
 {
     display: none;
+
 }}
