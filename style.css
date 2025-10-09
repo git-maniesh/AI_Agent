@@ -33,48 +33,17 @@ body {
     background: var(--primary-color);
 }
 
-
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    background: var(--primary-color);
-}
 /* Container */
 .container {
+    padding: 32px 60px;
     display: flex;
     flex-direction: column;
-    height: 100%; /* full height */
-    padding: 32px 60px 0;
-    overflow: hidden; /* hide overflow of header/suggestions */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    max-height: calc(100vh - 127px);
+    scrollbar-color: var(--scrollbar-color) transparent;
 }
-
-/* Chats scrollable */
-.chats-container {
-    flex: 1; /* fill remaining height */
-    overflow-y: auto; /* allow scrolling */
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 70%;
-    max-width: 980px;
-    margin-bottom: 16px; /* avoid being hidden behind input */
-}
-
-/* Optional: nice scrollbar */
-.chats-container::-webkit-scrollbar {
-    width: 8px;
-}
-.chats-container::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-color);
-    border-radius: 4px;
-}
-
 
 .container:where(.app-header, .suggestions, .prompt-wrapper, .message, .disclaimer-text) {
     margin: 0 auto;
@@ -156,12 +125,46 @@ body.chats-active .container :where(.app-header, .suggestions) {
 .suggestions .suggestions-item:nth-child(4) span { color: #6f42c1; }
 
 /* Chats container */
-.chats-container {
-    display: flex;
-    gap: 20px;
-    width: 70%;
-    flex-direction: column;
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* full height */
+    padding: 32px 60px 0;
+    overflow: hidden; /* hide overflow of header/suggestions */
+}
+
+/* Chats scrollable */
+.chats-container {
+    flex: 1; /* fill remaining height */
+    overflow-y: auto; /* allow scrolling */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 70%;
+    max-width: 980px;
+    /* margin-bottom: 3px; avoid being hidden behind input */
+}
+
+/* Optional: nice scrollbar */
+.chats-container::-webkit-scrollbar {
+    width: 8px;
+}
+.chats-container::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 4px;
+}
+
 
 .message {
     display: flex;
@@ -403,4 +406,3 @@ textarea { overflow-y: auto; }
     .suggestions .suggestions-item { width: 140px; padding: 10px; }
     .prompt-wrapper button { width: 36px; height: 36px; font-size: 1rem; }
 }
-
