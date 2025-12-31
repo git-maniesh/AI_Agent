@@ -1,8 +1,8 @@
 // const API_KEY = "AIzaSyDYg2l1LGTwVW-HQKEQJFWcsOvzLfaBd2c"
 // const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
 
-const API_KEY = "AIzaSyB4Dj9Sd9wmjcrKpKJibgMm-nAPAebJtDA";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}}`;
+const API_KEY = "AIzaSyA0AncRNGAQ9m7gZE8zz82PbbCmAF7e5uM";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const container = document.querySelector(".container");
 const chatsContainer = document.querySelector(".chats-container");
@@ -165,7 +165,7 @@ const handleFormSubmit = (e) => {
     ${
       userData.file.data
         ? userData.file.isImage
-          ? `<img src = "data:${userData.file.mime_type};base64,${userData.file.data}" class="img-attachment />`
+          ? `<img src = "data:${userData.file.mime_type};base64,${userData.file.data}" class="img-attachment" />`
           : `<p class="file-attachment"><span class="material-symbols-rounded">description</span> ${userData.file.fileName} </p>`
         : " "
     }`;
@@ -280,6 +280,7 @@ promptForm.addEventListener("submit", handleFormSubmit);
 promptForm
   .querySelector("#add-file-btn")
   .addEventListener("click", () => fileInput.click());
+
 
 
 
