@@ -1,7 +1,7 @@
 // const API_KEY = "AIzaSyDYg2l1LGTwVW-HQKEQJFWcsOvzLfaBd2c"
 // const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
 
-const API_KEY = "AIzaSyAOBLIUJYLjVpBRfkazBaRyXcT2IPuV8ho";
+const API_KEY = "AIzaSyB4Dj9Sd9wmjcrKpKJibgMm-nAPAebJtDA";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-8b:generateContent?key=${API_KEY}}`;
 
 const container = document.querySelector(".container");
@@ -280,6 +280,7 @@ promptForm.addEventListener("submit", handleFormSubmit);
 promptForm
   .querySelector("#add-file-btn")
   .addEventListener("click", () => fileInput.click());
+
 
 
 
